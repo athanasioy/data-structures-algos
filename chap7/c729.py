@@ -3,38 +3,8 @@ only a constant amount of additional space and not using any recursion.
 
 Answer:
 
-There are a couple of operations that need to be done
-for the linked list. First, I need to get a refernce to the current head
-of the list, which will become the new tail.
-
-I will fetch the first node (previous) and the next node (current).
-I will traverse the list by assinging current's next pointer to
-point to the previous node until I have reached the end of the list
-(tail). I will traverse the list by getting a reference to the
-current's next pointer and checking if that is None. If it None,
-that means I have reached the of the list and I should stop.
-I will take special care to first take current's next pointer,
-then updating current's next pointer to the previous value.
-For this, I will use a temporary value called tmp. Lastly,
-I need to update the previous node to point to the current(tmp).
-
-When I reach the end of the list, I need to assing the tail to the
-new head of the linked list.
-I also need to assign the old's head pointer to None, which the old
-head is the new tail of the list.
-
-If the size of the linked is less or equal to one, I simply return.
-
-Pseudocode:
-
-
-D is Tail, will become new head
-list._head = D
-old_head.next = None
-
-A -> B -> C -> D -> E -> None
-E -> D -> C -> B -> A -> None
-
+See Code Implementation.
+TODO: Add an explanation.
 """
 
 

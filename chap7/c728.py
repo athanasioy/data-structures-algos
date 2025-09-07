@@ -32,7 +32,7 @@ will be O(N), which is considered fast.
 
 
 I will start by passing the head node the function.
-The function call itself to return the node node in line.
+The function call itself to return the next node in line.
 I will hook the next node to point to current node.
 The base case is when the next node is None, in which point
 I will have reached the end of the list.
