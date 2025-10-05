@@ -302,7 +302,7 @@ class LinkedBinaryTree(BinaryTree):
                 self._handle_root_swap(root=q_node,child=p_node)
                 return
             if p == self.root():
-                self._handle_root_swap(root=q_node,child=p_node)
+                self._handle_root_swap(root=p_node,child=q_node)
                 return
 
             # Case 2.2: direct parent-child
