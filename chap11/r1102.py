@@ -1,0 +1,18 @@
+"""
+Insert, into an empty binary search tree, entries with keys 30, 40, 24, 58,
+48, 26, 11, 13 (in this order). Draw the tree after each insertion.
+
+"""
+
+
+"""
+ANSWER:
+
+       30
+      /  \
+   24     40
+  /   \      \
+11    26     58
+  \         /
+   13       48
+"""
