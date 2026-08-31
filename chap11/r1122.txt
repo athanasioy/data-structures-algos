@@ -1,0 +1,66 @@
+For the following statements about red-black trees, provide a justification
+for each true statement and a counterexample for each false one.
+ a. A subtree of a red-black tree is itself a red-black tree.
+ b. A node that does not have a sibling is red.
+ c. There is a unique (2,4) tree associated with a given red-black tree.
+ d. There is a unique red-black tree associated with a given (2,4) tree.
+
+
+Answer:
+A red-black tree must qualify 3 conditions
+ 1. The root is black
+ 2. Red nodes have black children
+ 3. All nodes with zero or one child have the same black depth
+
+a) False
+Take any subtree rooted at node x, where x is red.
+The subtree is not a red-black tree, since it violates
+the property 1).
+
+It is, however, true, if we always paint the root
+node black.
+
+Since all nodes with zero or 1 children have the
+same number of black ancestors (including themselves),
+that also means that every node has same number
+black nodes from itself to each leaf position.
+So property 3) holds.
+
+Property 2) holds for every subtree of a red-black tree.
+Property 1) holds by assumption.
+
+
+b)
+False; the root node is always black and
+it does not have a sibling
+
+
+Again if we exclude the root node, the statement
+is true.
+
+Every node that get inserted into a red-black tree
+is red by default.
+
+A red node without a sibling represents therefore
+a newly inserted node which cannot be black.
+
+c)
+True
+
+Given that there is one-to-one transformation
+for every red node w into its corresponding 2,4 tree,
+namely for each red node w merge with parent y,
+store the entry of w into y and let the children
+of w be the children of new merged node w' (recall
+that for each entry in node w in a 2,4 tree, there
+are 2 children, for which k_w >= k,
+for every k in left child and k_w <= k for each
+k in the right child)
+
+d)
+False
+see r1119 that depicts 4 different red-black trees that correspond
+to the same 2,4 tree
+
+
+
