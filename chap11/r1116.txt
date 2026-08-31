@@ -1,0 +1,9 @@
+Is the search tree of Figure 11.23(a) a (2,4) tree? Why or why not?
+
+
+The depicted tree is not a balanced (2,4) tree, since the external
+nodes under 14 have a depth 4, while the other external nodes
+have a depth of 3.
+
+A balanced 2,4 tree requires that all external nodes have the
+same depth

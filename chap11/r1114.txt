@@ -1,0 +1,88 @@
+Perform the following sequence of operations in an initially empty splay
+tree and draw the tree after each set of operations.
+a. Insert keys 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, in this order.
+b. Search for keys 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, in this order.
+c. Delete keys 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, in this order.
+
+ANSWER:
+a) [I will only until 8 because drawing trees is cumbersome]
+---------
+0
+---------
+   0          2
+    \ =>    /
+     2     0
+
+---------
+
+    2             4
+  /   \ =>      /
+ 0     4       2
+              / 
+             0
+---------
+
+    4               6
+   /  \            /
+  2    6  =>      4
+ /               /
+0               2
+               /
+              0
+
+
+---------
+        6              8
+       /  \           /
+      4    8         6
+     /         =>   /
+    2              4 
+   /              /
+  0              2
+                /
+               0
+
+b) [we will do only 2]
+search for 1
+------------
+[finished unsucessfully at leaf node 0]
+[splay 0]
+
+      8         0
+     /           \ 
+    6             6
+   /            /  \
+  0    =>      2    8
+   \            \
+    2            4
+     \
+      4
+-----------------
+search for 3
+[finished unsucessfully at 4]
+[splay 4]
+
+
+     0                   4
+      \                /   \
+       4     =>       0     6
+     /  \              \     \
+    2    6              2     8
+          \
+           8
+
+
+
+
+c)
+[we will do only 1]
+delete 4
+splay 0 (parent of 2)
+
+    2           0
+   / \           \
+  0   6  =>       2
+       \           \
+        8           6
+                     \
+                      8

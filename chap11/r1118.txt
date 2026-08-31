@@ -1,0 +1,47 @@
+Dr. Amongus claims that a (2,4) tree storing a set of entries will always
+have the same structure, regardless of the order in which the entries are
+inserted. Show that he is wrong.
+
+
+ANSWER:
+Assume entries 1,2,3,4,5.
+
+Let's examine the tree structure for
+insert order 1 -> 2 -> 3 -> 4 -> 5.
+
+Insert 1 -> 1 becomes root.
+Insert 2 -> 2 sits alongs with 1.
+Insert 3 -> 3 sits alongs with 1.
+Insert 3 -> 4 sits alongs with 1.
+Split happens at root ->
+3 becomes root with child [1,2] and [4]
+Insert 5 -> 5 sits long with 4
+
+    [3]
+   /   \
+[1,2]  [4,5]
+
+Let's examine the tree structure
+for insert order 5 -> 4 -> 3 -> 2 -> 1.
+
+Insert 5 -> t becomes root.
+Insert 4,3,2 -> sit along with 5.
+When inserting 2, a split happens
+
+4 becomes new root with childern
+[2,3] and [5]
+
+Insert 1 -> sits alongs [2,3]
+
+      [4]
+    /    \
+  /       \
+[1,2,3]    [5]
+
+
+The tree structures are different,
+we have thus proved that different 
+orders can produce different trees.
+
+
+

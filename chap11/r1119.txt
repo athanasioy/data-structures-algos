@@ -1,0 +1,54 @@
+Draw four different red-black trees that correspond to the same (2,4) tree.
+
+
+
+Answer:
+
+    [1,4,6] 
+   /  |  \ \ 
+[-1,0] [2,3]   [8,10]
+
+1)
+        4b
+       /  \
+      /    \
+     1r     6r
+    /  \      \
+   0b   3b     8b
+  /    /        \
+-1r   2r         10r
+
+
+2)
+  
+        4b
+       /  \
+      /    \
+     1r     6r
+    /  \      \
+   0b   2b     8b
+  /      \      \
+-1r      3r      10r
+  
+
+3)
+        4b
+       /  \
+      /    \
+     1r     6r
+    /  \      \
+   0b   3b     10b
+  /    /      /  
+-1r   2r    8r      
+  
+
+4)
+        4b
+       /  \
+      /    \
+     1r     6r
+    /  \      \
+  -1b   3b     10b
+   \   /      /  
+   0r  2r    8r      
+  

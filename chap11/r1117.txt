@@ -1,0 +1,39 @@
+An alternative way of performing a split at a node w in a (2,4) tree is
+to partition w into w′ and w′′, with w′ being a 2-node and w′′ a 3-node.
+Which of the keys k1, k2, k3, or k4 do we store at w’s parent? Why?
+
+
+ANSWER:
+
+A split happens in (2,4) when a node overflows, i.e.
+when it has 5 children with k1,k2,k3,k4 keys.
+
+Let w be the node that overflows and gets split.
+If w' comes a 2 node and w'' becomes a 3-node,
+we need to store k1 at w', k2 will be attached to 
+the parent node z and k3,k4 will belong to w''.
+
+This is necessary in order to perseve the (2,4)
+property that every child c_i of node z must
+be between k_(i-1) and k_(i+1).
+
+Formally, for every k in c_i,k must satisfy 
+    k_(i-1) < k < k_(i+1),
+where c_i in the ith child of a node w
+and k_i is the ith item of node w.
+(We conveniently define k_(i-1) = -Inf and
+k_(i+1) = +Inf if they don't exist)
+
+Therefore, k2 > k1 > k0 and k2 < k3 < k4 < k5
+which upholds the above property.
+
+Notice if k3 (or any other node)
+were to be stored at parent z,
+the child propery would be violated for w'',
+since k3 > k4 but k3 < k2, therefore
+there would exist a key k=k2 such that
+the above inequality
+    k3 > k2 > k4
+does not hold
+
+

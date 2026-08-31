@@ -1,0 +1,29 @@
+Consider the set of keys K = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}.
+a. Draw a (2,4) tree storing K as its keys using the fewest number of
+nodes.
+b. Draw a (2,4) tree storing K as its keys using the maximum number
+of nodes.
+
+Answer:
+a)
+
+        [4,      8,      12]
+       /     |        |      \
+      /      |        |       \
+     /       |        |        \
+    /        |        |         \
+[1,2,3]   [5,6,7]   [9,10,11]  [13,14,15]
+
+
+b)
+
+              10
+         /         \
+        5           13
+       / \         /  \
+      /   \       /    \
+     3     8    [4,6]   14
+    / \   / \     \     / \
+   1   2 7   9     11  12  15
+
+

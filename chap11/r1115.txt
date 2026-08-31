@@ -1,0 +1,15 @@
+What does a splay tree look like if its entries are accessed in increasing
+order by their keys?
+
+ANSWER:
+
+Since every key that get searched becomes root in
+a splay tree, that means that if keys are accessed
+in an increasing order, the largest key will be root,
+the second largest will be left of root, the third
+largest will be left of the second largest,
+while the least key will be the leftmost position.
+
+All other positions will be in between and that
+will effectively form a straight line or a doubly -linked
+list. 
