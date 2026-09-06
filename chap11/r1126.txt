@@ -1,0 +1,23 @@
+Let T be a red-black tree and let p be the position of the parent of the
+original node that is deleted by the standard search tree deletion algorithm.
+Prove that if p has zero children, the removed node was a red leaf.
+
+
+Answer:
+
+Let w denote the deleted node. If p has zero
+children after deleting node w, then that means
+that p had only one children before the deletion.
+That also means that w itself doesn't have any children,
+since p is left childless and in a standard BST deletion,
+childern of w attach to p.
+
+Since T was a valid red-black tree before the deletion,
+all nodes with zero and one children had the same
+black height. If w was black, w had a black height
+greater than node by 1. Also node that w itself
+cannot have any children, since having any children
+would either violate the black height property or
+the red property (double-red).
+Therefore w must have been red.
+

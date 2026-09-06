@@ -1,0 +1,17 @@
+Draw an example of a red-black tree that is not an AVL tree.
+
+Answer:
+
+
+             10b
+            /   \
+           5b    15b
+          / \   /    \
+         3b 6b 12r     20r
+              /  \     /  \
+             11b  14b 18b  25b
+                          /
+                         21r
+                      
+                      
+                  

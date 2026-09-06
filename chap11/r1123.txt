@@ -1,3 +1,19 @@
 Explain why you would get the same output in an inorder listing of the
 entries in a binary search tree, T, independent of whether T is maintained
 to be an AVL tree, splay tree, or red-black tree.
+
+
+Answer:
+In every binary search tree, the left node of a child
+is less than the parent and every right node is greater
+than the parent.
+
+Therefore an inorder listing will produce keys in an
+ascending order, whether it is an AVL tree, red-black tree
+or a splay tree, which only concern themselves with balancing
+the tree and in all cases preserve the aforementioned 
+binary tree property.
+
+
+
+
