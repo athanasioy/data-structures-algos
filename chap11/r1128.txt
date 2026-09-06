@@ -1,0 +1,24 @@
+Let T be a red-black tree and let p be the position of the parent of the
+original node that is deleted by the standard search tree deletion algorithm.
+prove that if p has two children, the removed node was black and had one
+red child.
+
+
+Answer:
+
+Let w denote the delete node.
+
+Since p after deletion has two children,
+then that means that w has exactly only child
+which becomes p's child after deletion.
+(If w had two children, BST swap would
+precede the deletion, which would contradict
+the premise that node w was deleted). 
+
+Since T is a valid red-black tree, 
+then w's child must have been red.
+If it had been black, we would have a
+black depth violation at w.
+Since w's child is red, and T is valid
+red-black tree, node w must have
+been black to avoid a double red violation.

@@ -1,0 +1,30 @@
+Let T be a red-black tree and let p be the position of the parent of the
+original node that is deleted by the standard search tree deletion algorithm.
+Prove that if p has one child, the deletion has caused a black deficit at p,
+except for the case when the one remaining child is a red leaf.
+
+
+Answer:
+Let w denote the deleted node.
+If p has one child after deletion, that
+child cannot have come from w. If p
+had as only child node w, which in turn had children
+which become p child after deletion,
+then node w would either violate red property
+or the black depth property.
+
+If deletion caused a black defiction at p,
+then that means that p's child is black.
+Hence the black depth and p's child will be
+greater by 1 compared to the black depth at 
+node p.
+
+If p's child is red, then deletion of w
+does not affect the black-depth property,
+since p's child black depth is equal to p's.
+(this also means that w was red to begin with).
+P's child is also leaf, since a red node must
+have black children, which would validate the
+assumption that T is a valid red-black tree
+before deletion (black depth at p's child
+is greater than black depth at p).
