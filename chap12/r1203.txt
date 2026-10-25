@@ -1,0 +1,36 @@
+Show that the running time of the merge-sort algorithm on an n-element
+sequence is O(nlogn), even when n is not a power of 2.
+
+
+Answer:
+
+We will begin our analysis of the recursive function merge-sort
+by examining a single invocation of the function.
+
+Let n be the number of elements of list S.
+
+At invocation at depth i, the size of sublist S is at most
+equal to ceiling(n/2^i)=n_sub.
+
+Halving elements into two sublists takes O(n_sub) time
+and the merge_sorted function calls takens O(n1+n2) time,
+which is again O(n) time.
+
+At depth i, we can have at most 2^i nodes (this is true
+for all depths except the last one).
+
+Hence, at depth i we can at most 2^i subproblems
+of size at most ceiling(n/2^i), and, 
+observing that ceiling(x) <= x +1,
+
+the total number of operations  at depth i is
+
+2^i*ceiling(n/2^i) <= 2^i*(n/2^i + 1) = n + 2^i
+
+which is O(n).
+
+Since the height of a merge-sort recursion tree is
+logn, the total running time is O(n)*O(logn) which is
+O(nlogn)
+
+

@@ -1,0 +1,44 @@
+Give a complete justification of Proposition 12.1
+
+<<<
+Proposition 12.1: The merge-sort tree associated with an execution of merge-
+sort on a sequence of size n has height ⌈logn⌉
+>>>
+
+
+Answer:
+When using the divide and conquer strategy, the height of the merge-sort
+tree is determined by how many times N can be divided by 2 until
+each subtree has a element count of 1.
+
+Let y define the number of times we can divide by 2.
+n*2^(-y)=1 
+=> n/2^(y)= 1
+=> n = 2^y
+=> logn = y
+
+and since y is an integer
+=> y = ceiling{logn}
+
+
+2nd try:
+
+The size of the merge-sort tree sub-problem at height h is
+at most ceiling(n/2^h).
+
+
+Hence, the maximum height is reached when 
+
+ceiling(n/2^h) = 1
+
+which implies that 
+
+n/2^h <= 1
+
+=> n <= 2^h
+
+=> logn <= h
+
+therefore the height of the tree is bounded below by
+logn, and since h is the maximun depth , h is bounded
+above ceiling{logn}

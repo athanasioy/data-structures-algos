@@ -1,0 +1,12 @@
+In the merge-sort tree shown in Figures 12.2 through 12.4, some edges are
+drawn as arrows. What is the meaning of a downward arrow? How about
+an upward arrow?
+
+
+Answer:
+
+Downward arrows signal a divide operation, i.e. solve
+the merge-sort problem for size n/2. Upward arrows signal
+the merge operation, i.e. the merge-sort operation
+for two subproblems of size n/2 that produces a sorted
+sequence of size n.
